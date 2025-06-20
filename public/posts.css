@@ -1,0 +1,191 @@
+/* === Global Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Body Styling === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* === Heading === */
+.headingg {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.headingg h1 {
+    color: #d32f2f;
+    font-size: 2rem;
+}
+
+/* === Masonry Layout === */
+.postsData {
+    column-count: 4;
+    column-gap: 1rem;
+    padding: 0 2rem;
+}
+
+/* === Individual Post Card === */
+.post {
+    display: inline-block;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    break-inside: avoid;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* === Username and Content Styling === */
+.username {
+    color: #1976d2;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.content {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* === Create New Post Link === */
+/* === Create Post Link Positioned Top Right === */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    margin-bottom: 10px;
+}
+
+.create-link a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #e91e63;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #e91e63;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.create-link a:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+    .postsData {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .postsData {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .postsData {
+        column-count: 1;
+        padding: 0 1rem;
+    }
+}
+/* === View and Edit Links as Buttons === */
+.post a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* View Post Button */
+.post a[href*="/posts/"]:not([href*="/edit"]) {
+    background-color: #0d6872;
+    color: white;
+}
+
+.post a[href*="/posts/"]:not([href*="/edit"]):hover {
+    background-color: #535f8b;
+    transform: scale(1.05);
+}
+
+/* Edit Post Button */
+.post a[href*="/edit"] {
+    background-color: #784c0a;
+    color: white;
+}
+
+.post a[href*="/edit"]:hover {
+    background-color: #481510;
+    transform: scale(1.05);
+}
+
+/* === Button Group Alignment === */
+.post {
+    position: relative;
+    text-align: center;
+}
+
+/* === Common Button Link Styles === */
+.post a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    margin: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.post a:hover {
+    background-color: #9d9494;
+    border-color: #999;
+}
+
+/* === Delete Button Styles === */
+form {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+form button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #bbb;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}

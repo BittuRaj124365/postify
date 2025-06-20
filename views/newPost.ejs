@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Thought</title>
+    <link rel="stylesheet" href="/newPost.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>✨ Share What's on Your Mind</h1>
+        <p class="tagline">Your words matter. Let the world hear your voice.</p>
+        <form method="POST" action="/posts" class="post-form">
+            <input type="text" name="username" placeholder="Enter your name..." required>
+            <textarea name="content" placeholder="Type your thoughts here..." rows="6" required></textarea>
+            <button type="submit">🚀 Post It</button>
+        </form>
+        <div class="back-link">
+            <a href="/posts">← Back to Posts</a>
+        </div>
+    </div>
+</body>
+</html>
