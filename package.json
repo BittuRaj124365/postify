@@ -1,4 +1,7 @@
 {
+  "engine":{
+    "node":"22.13.1"
+  },
   "name": "restfulproject",
   "version": "1.0.0",
   "description": "A simple project using Restful API's",
@@ -13,5 +16,14 @@
     "express": "^5.1.0",
     "method-override": "^3.0.0",
     "uuid": "^11.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BittuRaj124365/postify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BittuRaj124365/postify/issues"
+  },
+  "homepage": "https://github.com/BittuRaj124365/postify#readme"
 }

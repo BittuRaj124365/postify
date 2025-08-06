@@ -1,7 +1,7 @@
 const express=require("express");
 const app=express();
 app.use(express.json()); // optional but good
-const port=5050;
+const port=process.env.PORT || 5050;
 const {v4:uuidv4}=require("uuid");// v4 is the version 4
  //uuidv4();// this function call will gerenate the unique id wherever it will implement.
  const methodOverride=require("method-override");
